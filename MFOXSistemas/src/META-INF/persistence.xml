@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="MFOXSistemasPU">
+	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+	<class>br.com.mfoxsistemas.model.QuemSomos</class>
+	<class>br.com.mfoxsistemas.model.Paragrafo</class>
+	<class>br.com.mfoxsistemas.model.ComoTrabalhamos</class>
+	<class>br.com.mfoxsistemas.model.Destaque</class>
+	<properties>
+	<!-- CONEXAO COM BANCO -->
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="MasterKey" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/portal" />
+	
+	<!-- FORMARTACAO SQL -->
+		<property name="hibernate.show_sql" value="true"/>
+		<property name="hibernate.format_sql" value="true" />
+	<!-- CONFIGURACAO DO BANCO -->	
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" /> 
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+	</properties>	
+	</persistence-unit>
+</persistence>
